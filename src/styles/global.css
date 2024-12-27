@@ -7,7 +7,7 @@
 @layer base {
   /* "Device" container in Figma */
   .gfe-main {
-    @apply min-h-screen bg-white py-[200px];
+    @apply flex min-h-screen flex-col items-center bg-white py-[200px];
   }
 
   /* "Content" container in Figma */
@@ -18,5 +18,50 @@
   /* "Content" container in Figma */
   .gfe-container {
     @apply mx-auto w-full rounded border border-red-500 bg-white px-4 md:max-w-full md:rounded-md md:px-8 lg:max-w-[1280px];
+  }
+
+  /**
+   * Badge component
+   * Sizes:
+   * - badge-sm
+   * - badge-md
+   * - badge-lg
+   * Variants:
+   * - badge-neutral
+   * - badge-error
+   * - badge-warning
+   * - badge-success
+   * - badge-brand
+   */
+  .badge-sm {
+    @apply px-1.5 py-0.5 text-xs;
+  }
+
+  .badge-md {
+    @apply px-2 py-0.5 text-sm;
+  }
+
+  .badge-lg {
+    @apply px-2.5 py-1 text-sm;
+  }
+
+  .badge-neutral {
+    @apply border-neutral-200 bg-gray-50 text-neutral-600;
+  }
+
+  .badge-error {
+    @apply border-red-200 bg-red-50 text-red-600;
+  }
+
+  .badge-warning {
+    @apply border-amber-200 bg-amber-50 text-amber-700;
+  }
+
+  .badge-success {
+    @apply border-green-200 bg-green-50 text-green-700;
+  }
+
+  .badge-brand {
+    @apply border-indigo-200 bg-indigo-50 text-indigo-700;
   }
 }
